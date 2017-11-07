@@ -26,4 +26,4 @@ go get -d github.com/vigorcrust/capoeira
 
 ## Author
 
-[Martens, Daniel (335604)](https://github.com/vigorcrust)
+[vigorcrust](https://github.com/vigorcrust)
