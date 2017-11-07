@@ -9,7 +9,13 @@ import (
 )
 
 //GlobalFlags holds all global flags
-var GlobalFlags = []cli.Flag{}
+var GlobalFlags = []cli.Flag{
+	cli.BoolFlag{
+		Name:   "verbose",
+		Usage:  "enable verbose logging",
+		EnvVar: "CAPOEIRA_VERBOSE",
+	},
+}
 
 //Commands holds all subcommands
 var Commands = []cli.Command{
