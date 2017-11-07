@@ -1,9 +1,14 @@
 package command
 
-import "github.com/urfave/cli"
+import (
+	"fmt"
 
+	"github.com/urfave/cli"
+)
+
+//CmdServer is the main entrypoint for the server
 func CmdServer(c *cli.Context) error {
-	// Write your code here
+	fmt.Println(c.String("port"))
 
 	return nil
 }

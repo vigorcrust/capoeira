@@ -19,7 +19,7 @@ var Commands = []cli.Command{
 		Action: command.CmdServer,
 		Flags: []cli.Flag{
 			cli.StringFlag{
-				Name:  "port",
+				Name:  "port, p",
 				Value: "8443",
 				Usage: "listening port",
 			},
@@ -29,7 +29,13 @@ var Commands = []cli.Command{
 		Name:   "client",
 		Usage:  "",
 		Action: command.CmdClient,
-		Flags:  []cli.Flag{},
+		Flags: []cli.Flag{
+			cli.StringFlag{
+				Name:  "url, u",
+				Value: "https://server:8443",
+				Usage: "server endpoint url. Only https is allowed.",
+			},
+		},
 	},
 }
 

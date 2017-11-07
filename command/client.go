@@ -1,9 +1,14 @@
 package command
 
-import "github.com/urfave/cli"
+import (
+	"fmt"
 
+	"github.com/urfave/cli"
+)
+
+//CmdClient is the main entrypoint for the client
 func CmdClient(c *cli.Context) error {
-	// Write your code here
+	fmt.Println(c.String("url"))
 
 	return nil
 }
