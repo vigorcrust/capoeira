@@ -1,6 +1,6 @@
 # capoeira
 
-
+Capoeira is an application which lets you tunnel through restrictive Proxies.
 
 ## Description
 
@@ -11,7 +11,7 @@
 To install, use `go get`:
 
 ```bash
-$ go get -d github.com/vigorcrust/capoeira
+go get -d github.com/vigorcrust/capoeira
 ```
 
 ## Contribution
