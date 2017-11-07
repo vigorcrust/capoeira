@@ -15,25 +15,25 @@ var GlobalFlags = []cli.Flag{}
 var Commands = []cli.Command{
 	{
 		Name:   "server",
-		Usage:  "",
+		Usage:  "is the server which is located in the target network (probably internet).",
 		Action: command.CmdServer,
 		Flags: []cli.Flag{
 			cli.StringFlag{
-				Name:  "port, p",
-				Value: "8443",
-				Usage: "listening port",
+				Name:   "port, p",
+				Usage:  "listening port like 8443",
+				EnvVar: "CAPOEIRA_PORT",
 			},
 		},
 	},
 	{
 		Name:   "client",
-		Usage:  "",
+		Usage:  "is the client which is located in the source network (probably corpnetwork).",
 		Action: command.CmdClient,
 		Flags: []cli.Flag{
 			cli.StringFlag{
-				Name:  "url, u",
-				Value: "https://server:8443",
-				Usage: "server endpoint url. Only https is allowed.",
+				Name:   "url, u",
+				Usage:  "server endpoint url. Only https is allowed like https://server:8443",
+				EnvVar: "CAPOEIRA_URL",
 			},
 		},
 	},
