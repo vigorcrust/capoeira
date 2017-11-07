@@ -1,6 +1,6 @@
 # capoeira
 
-Capoeira is an application which lets you tunnel through restrictive Proxies.
+Capoeira is an application which lets you tunnel through restrictive proxies.
 
 ## Description
 
