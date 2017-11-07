@@ -1,7 +1,7 @@
 package command
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/urfave/cli"
 	"github.com/vigorcrust/capoeira/util"
@@ -9,11 +9,15 @@ import (
 
 //CmdServer is the main entrypoint for the server
 func CmdServer(c *cli.Context) error {
-	if c.NArg() == 0 {
+	log.SetPrefix("[" + util.Name + "-server] ")
+	if c.NumFlags() < 2 {
 		util.PrintErrorAndUsage("", c)
 		return nil
 	}
-	fmt.Println(c.String("port"))
+
+	if c.GlobalBool("verbose") {
+		log.Println(c.String("port"))
+	}
 
 	return nil
 }

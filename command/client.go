@@ -1,7 +1,7 @@
 package command
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/urfave/cli"
 	"github.com/vigorcrust/capoeira/util"
@@ -9,10 +9,15 @@ import (
 
 //CmdClient is the main entrypoint for the client
 func CmdClient(c *cli.Context) error {
-	if c.NArg() == 0 {
+	log.SetPrefix("[" + util.Name + "-client] ")
+	if c.NumFlags() < 2 {
 		util.PrintErrorAndUsage("", c)
 		return nil
 	}
-	fmt.Println(c.String("url"))
+
+	if c.GlobalBool("verbose") {
+		log.Println(c.String("url"))
+	}
+
 	return nil
 }
